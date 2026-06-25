@@ -1,237 +1,321 @@
 <!doctype html>
-<!--
-    Interact Club Conakry — index.html
-    Author: Patrick
-    Updated:  September 2025
--->
 <html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="L'Interact Club de Conakry : jeunes leaders engagés au service de la communauté — projets, événements et espace membres.">
-    <meta name="theme-color" content="#0a6">
-    <link rel="icon" href="res/img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <title>Accueil — Interact Club Conakry</title>
+    <meta name="description" content="Interact Club Conakry — jeunes leaders engagés au service de la communauté. Projets, événements et espace membres.">
+    <meta name="theme-color" content="#006644">
+    <meta property="og:title" content="Interact Club Conakry — Servir d'abord">
+    <meta property="og:description" content="Jeunes leaders engagés au service de la communauté. Projets, événements et espace membres.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <title>Interact Club Conakry — Servir d'abord</title>
 </head>
 <body>
     <a class="skip-link" href="#main">Passer au contenu</a>
 
-    <header>
-        <section id="logo-container" class="container">
-            <div class="logo" aria-hidden="true">
-                <img src="res/img/logo.jpg" alt="Logo Interact Conakry" loading="lazy">
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="res/img/logo.png" alt="Logo Interact Conakry" width="48" height="48">
+                <span class="logo-text">Interact <strong>Conakry</strong></span>
             </div>
-            <div class="logo-text">
-                <q>Servir d'abord.</q>
-            </div>
-
             <nav aria-label="Navigation principale">
-                <ul>
+                <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links">
                     <li><a href="#hero">Accueil</a></li>
                     <li><a href="#about">À propos</a></li>
                     <li><a href="#projects">Projets</a></li>
                     <li><a href="#team">Équipe</a></li>
                     <li><a href="#events">Événements</a></li>
-                    <li><a href="#member-area">Espace membres</a></li>
+                    <li><a href="#member-area">Membres</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-        </section>
+        </div>
     </header>
 
     <main id="main">
+        <!-- HERO -->
         <section id="hero" class="hero">
-            <h1>Jeunes leaders au service de la communauté</h1>
-            <p>L'Interact Club de Conakry rassemble des jeunes engagés pour créer un impact positif dans notre société.</p>
-            <a href="#about" class="btn">Découvrir</a>
-        </section>
-
-        <section id="about" class="placeholder-section">
-            <div class="container">
-                <h2>À propos de nous</h2>
-                <p>L'Interact Club de Conakry est un club de jeunes leaders dédié au service et au développement des compétences en leadership.</p>
-
-                <div class="about-text" aria-labelledby="mission-title">
-                    <h3 id="mission-title">Notre mission</h3>
-                    <p>Parrainé par le Rotary Club partenaire, nous réunissons des jeunes (12–18 ans) motivés à améliorer leur communauté.</p>
-                    <p>Nos objectifs principaux sont :</p>
-                    <ul>
-                        <li>Développer les qualités de leadership et l'intégrité personnelle</li>
-                        <li>Favoriser le respect d'autrui</li>
-                        <li>Reconnaître la valeur de chaque individu</li>
-                        <li>Promouvoir la responsabilité civique</li>
-                    </ul>
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <h1>Jeunes leaders au service de la communauté</h1>
+                <p>L'Interact Club de Conakry rassemble des jeunes engagés pour créer un impact positif à travers des projets concrets et solidaires.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Découvrir nos projets</a>
+                    <a href="#member-area" class="btn btn-outline">Rejoindre le club</a>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="placeholder-section">
+        <!-- ABOUT -->
+        <section id="about" class="section">
             <div class="container">
-                <h2>Nos projets</h2>
-                <div class="project-list">
-                    <div class="project"><h3>Nettoyage de quartiers</h3><p>Ramassage des déchets et sensibilisation.</p></div>
-                    <div class="project"><h3>Plantation d'arbres</h3><p>Campagne de reboisement et sensibilisation.</p></div>
-                    <div class="project"><h3>Collecte alimentaire</h3><p>Distribution aux familles défavorisées.</p></div>
-                    <div class="project"><h3>Cours de soutien</h3><p>Aide aux enfants après l'école.</p></div>
-                    <div class="project"><h3>Ateliers numériques</h3><p>Initiation aux outils informatiques.</p></div>
-                    <div class="project"><h3>Hackathon local</h3><p>Compétition de projets innovants à impact social.</p></div>
+                <div class="section-header">
+                    <span class="section-tag">À propos</span>
+                    <h2>Qui sommes-nous ?</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>L'Interact Club de Conakry, parrainé par le Rotary International, est un club de jeunes leaders âgés de 12 à 18 ans. Notre mission : développer le leadership au service de la communauté.</p>
+                        <h3>Notre mission en 4 piliers</h3>
+                        <ul class="mission-list">
+                            <li>Développer les qualités de leadership et l'intégrité personnelle</li>
+                            <li>Favoriser le respect d'autrui et la compréhension interculturelle</li>
+                            <li>Reconnaître la valeur de chaque individu</li>
+                            <li>Promouvoir la responsabilité civique et le service aux autres</li>
+                        </ul>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="6">0</span>
+                            <span class="stat-label">Projets en cours</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="3">0</span>
+                            <span class="stat-label">Événements cette année</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="150">0</span>
+                            <span class="stat-label">Bénéficiaires</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="team" class="placeholder-section">
+        <!-- PROJECTS -->
+        <section id="projects" class="section section-alt">
             <div class="container">
-                <h2>Notre équipe</h2>
-                <p>Rencontrez quelques-uns des jeunes leaders qui font vivre l'Interact Club Conakry.</p>
+                <div class="section-header">
+                    <span class="section-tag">Nos projets</span>
+                    <h2>Des actions concrètes</h2>
+                </div>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="env">Environnement</button>
+                    <button class="filter-btn" data-filter="social">Social</button>
+                    <button class="filter-btn" data-filter="edu">Éducation</button>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card" data-category="env">
+                        <div class="project-icon">🌱</div>
+                        <h3>Plantation d'arbres</h3>
+                        <p>Campagne de reboisement dans la commune de Ratoma — 200 arbres plantés en 2025.</p>
+                    </article>
+                    <article class="project-card" data-category="env">
+                        <div class="project-icon">🧹</div>
+                        <h3>Nettoyage de quartiers</h3>
+                        <p>Ramassage des déchets et sensibilisation à l'hygiène publique dans les quartiers populaires.</p>
+                    </article>
+                    <article class="project-card" data-category="social">
+                        <div class="project-icon">🍲</div>
+                        <h3>Collecte alimentaire</h3>
+                        <p>Distribution de paniers alimentaires aux familles défavorisées pendant le Ramadan.</p>
+                    </article>
+                    <article class="project-card" data-category="edu">
+                        <div class="project-icon">📚</div>
+                        <h3>Cours de soutien</h3>
+                        <p>Aide aux enfants du primaire après l'école — maths, français et lecture.</p>
+                    </article>
+                    <article class="project-card" data-category="edu">
+                        <div class="project-icon">💻</div>
+                        <h3>Ateliers numériques</h3>
+                        <p>Initiation aux outils informatiques et aux bases de la programmation pour les jeunes.</p>
+                    </article>
+                    <article class="project-card" data-category="social">
+                        <div class="project-icon">🌱</div>
+                        <h3>Hackathon local</h3>
+                        <p>48h pour développer des solutions technologiques locales à impact social.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section id="team" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Notre équipe</span>
+                    <h2>Les jeunes qui font vivre le club</h2>
+                </div>
                 <div class="team-grid">
-                    <article class="team-member">
-                        <figure>
-                            <img src="res/img/team1.jpg" alt="Aminata Diallo, Présidente" loading="lazy" onerror="this.src='res/img/placeholder.png'">
-                            <figcaption>Aminata Diallo</figcaption>
-                        </figure>
-                        <h3>Présidente</h3>
-                        <p>Coordonne les projets communautaires et représente le club.</p>
+                    <article class="team-card">
+                        <div class="team-avatar">AD</div>
+                        <h3>Aminata Diallo</h3>
+                        <span class="team-role">Présidente</span>
+                        <p>Coordonne les projets communautaires et représente le club auprès des partenaires.</p>
                     </article>
-
-                    <article class="team-member">
-                        <figure>
-                            <img src="res/img/team2.jpg" alt="Moussa Camara, Vice-président" loading="lazy" onerror="this.src='res/img/placeholder.png'">
-                            <figcaption>Moussa Camara</figcaption>
-                        </figure>
-                        <h3>Vice-président</h3>
-                        <p>Responsable logistique et organisation d'événements.</p>
+                    <article class="team-card">
+                        <div class="team-avatar">MC</div>
+                        <h3>Moussa Camara</h3>
+                        <span class="team-role">Vice-président</span>
+                        <p>Responsable logistique et organisation des événements du club.</p>
                     </article>
-
-                    <article class="team-member">
-                        <figure>
-                            <img src="res/img/team3.jpg" alt="Fatoumata Keita, Responsable projets" loading="lazy" onerror="this.src='res/img/placeholder.png'">
-                            <figcaption>Fatoumata Keita</figcaption>
-                        </figure>
-                        <h3>Responsable projets</h3>
+                    <article class="team-card">
+                        <div class="team-avatar">FK</div>
+                        <h3>Fatoumata Keita</h3>
+                        <span class="team-role">Responsable projets</span>
                         <p>Conçoit et pilote les initiatives environnementales et sociales.</p>
                     </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="events" class="placeholder-section">
-            <div class="container">
-                <h2>Nos événements</h2>
-                <div class="events-list">
-                    <article class="event-card">
-                        <img src="res/img/event-cleanup.jpg" alt="Nettoyage de quartier" loading="lazy" onerror="this.src='res/img/placeholder.png'">
-                        <div class="event-info">
-                            <h3>Nettoyage de quartier</h3>
-                            <time datetime="2025-04-12">12 avril 2025</time>
-                            <p>Rassemblement place du marché à 08:00. Outils fournis.</p>
-                            <a href="#member-area" class="btn">S'inscrire</a>
-                        </div>
-                    </article>
-
-                    <article class="event-card">
-                        <img src="res/img/event-planting.jpg" alt="Plantation d'arbres" loading="lazy" onerror="this.src='res/img/placeholder.png'">
-                        <div class="event-info">
-                            <h3>Plantation d'arbres</h3>
-                            <time datetime="2025-05-03">3 mai 2025</time>
-                            <p>Campagne de reboisement dans la commune de Ratoma.</p>
-                            <a href="#member-area" class="btn">Participer</a>
-                        </div>
-                    </article>
-
-                    <article class="event-card">
-                        <img src="res/img/event-hackathon.jpg" alt="Hackathon jeunes" loading="lazy" onerror="this.src='res/img/placeholder.png'">
-                        <div class="event-info">
-                            <h3>Hackathon jeunes</h3>
-                            <time datetime="2025-06-20">20-21 juin 2025</time>
-                            <p>48h pour développer solutions locales — prix pour les gagnants.</p>
-                            <a href="#member-area" class="btn">Voir le programme</a>
-                        </div>
+                    <article class="team-card">
+                        <div class="team-avatar">IS</div>
+                        <h3>Ibrahim Sylla</h3>
+                        <span class="team-role">Trésorier</span>
+                        <p>Gère le budget, les dons et la transparence financière du club.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="member-area" class="placeholder-section">
+        <!-- EVENTS -->
+        <section id="events" class="section section-alt">
             <div class="container">
-                <h2>Espace membres</h2>
-                <p>Zone réservée aux membres. Connectez-vous pour accéder aux ressources et vous inscrire aux événements.</p>
+                <div class="section-header">
+                    <span class="section-tag">Événements</span>
+                    <h2>Prochaines actions</h2>
+                </div>
+                <div id="countdown" class="countdown">
+                    <p class="countdown-label">Prochain événement dans :</p>
+                    <div class="countdown-timer">
+                        <span class="cd-block"><span id="cd-days">00</span><small>Jours</small></span>
+                        <span class="cd-sep">:</span>
+                        <span class="cd-block"><span id="cd-hours">00</span><small>Heures</small></span>
+                        <span class="cd-sep">:</span>
+                        <span class="cd-block"><span id="cd-mins">00</span><small>Min</small></span>
+                        <span class="cd-sep">:</span>
+                        <span class="cd-block"><span id="cd-secs">00</span><small>Sec</small></span>
+                    </div>
+                </div>
+                <div class="events-grid">
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">15</span>
+                            <span class="event-month">juil</span>
+                        </div>
+                        <div class="event-body">
+                            <h3>Nettoyage de quartier — Matam</h3>
+                            <p>Rassemblement à 08:00. Gants et sacs fournis. Ouvert à tous.</p>
+                            <a href="#member-area" class="btn btn-sm">S'inscrire</a>
+                        </div>
+                    </article>
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">22</span>
+                            <span class="event-month">juil</span>
+                        </div>
+                        <div class="event-body">
+                            <h3>Hackathon 48h — Numérique</h3>
+                            <p>Développe des solutions pour ta communauté. Prix pour les 3 meilleurs projets.</p>
+                            <a href="#member-area" class="btn btn-sm">S'inscrire</a>
+                        </div>
+                    </article>
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">05</span>
+                            <span class="event-month">août</span>
+                        </div>
+                        <div class="event-body">
+                            <h3>Plantation — Ratoma</h3>
+                            <p>Campagne de reboisement. 300 arbres à planter. Viens avec ta motivation !</p>
+                            <a href="#member-area" class="btn btn-sm">Participer</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                <div class="member-columns">
+        <!-- MEMBER AREA -->
+        <section id="member-area" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Espace membres</span>
+                    <h2>Rejoignez l'aventure</h2>
+                </div>
+                <div class="member-grid">
                     <div class="member-box">
                         <h3>Connexion</h3>
-                        <form action="/login" method="post" class="login-form" autocomplete="on">
-                            <label for="member-email">Email</label>
-                            <input id="member-email" name="email" type="email" placeholder="vous@exemple.com" required autocomplete="email">
-                            <label for="member-password">Mot de passe</label>
-                            <input id="member-password" name="password" type="password" required autocomplete="current-password">
-                            <button type="submit" class="btn">Se connecter</button>
+                        <form action="#" method="post" class="member-form" autocomplete="on">
+                            <div class="form-group">
+                                <label for="member-email">Email</label>
+                                <input id="member-email" name="email" type="email" placeholder="vous@exemple.com" required autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="member-password">Mot de passe</label>
+                                <input id="member-password" name="password" type="password" required autocomplete="current-password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Se connecter</button>
                         </form>
-                        <p><a href="#register">Pas encore membre ? Inscrivez-vous</a></p>
+                        <p class="form-link"><a href="#register">Pas encore membre ? Inscrivez-vous →</a></p>
                     </div>
-
-                    <div class="member-box" id="register"></div>
+                    <div class="member-box" id="register">
                         <h3>Inscription</h3>
-                        <form action="/register" method="post" class="register-form" autocomplete="on"></form>
-                            <label for="reg-name">Nom complet</label>
-                            <input id="reg-name" name="name" type="text" required autocomplete="name">
-                            <label for="reg-age">Âge</label>
-                            <input id="reg-age" name="age" type="number" min="12" max="18" required>
-                            <label for="reg-email">Email</label>
-                            <input id="reg-email" name="email" type="email" required autocomplete="email">
-                            <button type="submit" class="btn">S'inscrire</button>
+                        <form action="#" method="post" class="member-form" autocomplete="on">
+                            <div class="form-group">
+                                <label for="reg-name">Nom complet</label>
+                                <input id="reg-name" name="name" type="text" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-age">Âge</label>
+                                <input id="reg-age" name="age" type="number" min="12" max="18" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-email">Email</label>
+                                <input id="reg-email" name="email" type="email" required autocomplete="email">
+                            </div>
+                            <button type="submit" class="btn btn-primary">S'inscrire</button>
                         </form>
-                    </div>
-                </div>
-
-                <div class="member-resources">
-                    <h3>Ressources membres</h3>
-                    <ul>
-                        <li><a href="res/docs/charte.pdf" target="_blank" rel="noopener noreferrer">Charte du club (PDF)</a></li>
-                        <li><a href="res/docs/guide-projets.pdf" target="_blank" rel="noopener noreferrer">Guide de montage de projet</a></li>
-                        <li><a href="res/docs/agenda-2025.pdf" target="_blank" rel="noopener noreferrer">Agenda 2025</a></li>
-                    </ul>
-
-                    <h4>Galerie membres</h4>
-                    <div class="gallery-thumbs">
-                        <img src="res/img/gallery1.jpg" alt="Galerie 1" loading="lazy" onerror="this.src='res/img/placeholder.png'">
-                        <img src="res/img/gallery2.jpg" alt="Galerie 2" loading="lazy" onerror="this.src='res/img/placeholder.png'">
-                        <img src="res/img/gallery3.jpg" alt="Galerie 3" loading="lazy" onerror="this.src='res/img/placeholder.png'">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="placeholder-section">
+        <!-- CONTACT -->
+        <section id="contact" class="section section-alt">
             <div class="container">
-                <h2>Contactez-nous</h2>
-                <p>Pour toute question, partenariat ou don, utilisez le formulaire ci-dessous ou nos coordonnées.</p>
-
+                <div class="section-header">
+                    <span class="section-tag">Contact</span>
+                    <h2>Parlons-nous</h2>
+                </div>
                 <div class="contact-grid">
                     <div class="contact-info">
                         <h3>Coordonnées</h3>
-                        <p><strong>Adresse :</strong> Place du Marché, Conakry, Guinée</p>
-                        <p><strong>Téléphone :</strong> +224 600 00 000</p>
-                        <p><strong>Email :</strong> <a href="mailto:contact@interact-conakry.gn">contact@interact-conakry.gn</a></p>
+                        <ul class="contact-list">
+                            <li><strong>📍</strong> Place du Marché, Conakry, Guinée</li>
+                            <li><strong>📞</strong> +224 600 00 000</li>
+                            <li><strong>🌱️</strong> <a href="mailto:contact@interact-conakry.gn">contact@interact-conakry.gn</a></li>
+                        </ul>
                         <h4>Horaires</h4>
-                        <p>Lundi - Vendredi : 09:00 - 17:00</p>
-                        <div class="map-placeholder" aria-hidden="true">
-                            <img src="res/img/map-placeholder.png" alt="Carte - emplacement" loading="lazy" onerror="this.src='res/img/placeholder.png'">
-                        </div>
+                        <p>Lundi — Vendredi : 09:00 — 17:00</p>
                     </div>
-
-                    <div class="contact-form">
+                    <div class="contact-form-wrapper">
                         <h3>Envoyer un message</h3>
-                        <form action="/contact" method="post" autocomplete="on">
-                            <label for="contact-name">Nom</label>
-                            <input id="contact-name" name="name" type="text" required autocomplete="name">
-                            <label for="contact-email">Email</label>
-                            <input id="contact-email" name="email" type="email" required autocomplete="email">
-                            <label for="contact-subject">Sujet</label>
-                            <input id="contact-subject" name="subject" type="text" required>
-                            <label for="contact-message">Message</label>
-                            <textarea id="contact-message" name="message" rows="6" required placeholder="Votre message..."></textarea>
-                            <button type="submit" class="btn">Envoyer</button>
+                        <form action="#" method="post" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="ct-name">Nom</label>
+                                    <input id="ct-name" name="name" type="text" required autocomplete="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ct-email">Email</label>
+                                    <input id="ct-email" name="email" type="email" required autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ct-subject">Sujet</label>
+                                <input id="ct-subject" name="subject" type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ct-message">Message</label>
+                                <textarea id="ct-message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
                         </form>
                     </div>
                 </div>
@@ -239,17 +323,25 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Interact Club Conakry. Tous droits réservés.</p>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <strong>Interact Club Conakry</strong>
+                <p>« Servir d'abord »</p>
+            </div>
+            <div class="footer-links">
+                <a href="#projects">Projets</a>
+                <a href="#events">Événements</a>
+                <a href="#member-area">Membres</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Interact Club Conakry. Tous droits réservés.</p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        // small helpers: set current year and add lightweight progressive enhancement
-        (function () {
-            var y = new Date().getFullYear();
-            var el = document.getElementById('year');
-            if (el) el.textContent = y;
-        })();
-    </script>
+    <button class="back-to-top" aria-label="Retour en haut">↑</button>
+    <script src="script.js"></script>
 </body>
 </html>
