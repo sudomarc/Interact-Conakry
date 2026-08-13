@@ -11,7 +11,7 @@
     <meta name="description" content="L'Interact Club de Conakry : jeunes leaders engagés au service de la communauté — projets, événements et espace membres.">
     <meta name="theme-color" content="#0a6">
     <link rel="icon" href="res/img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Accueil — Interact Club Conakry</title>
 </head>
 <body>
@@ -52,7 +52,7 @@
                 <h2>À propos de nous</h2>
                 <p>L'Interact Club de Conakry est un club de jeunes leaders dédié au service et au développement des compétences en leadership.</p>
 
-                <div class="about-text" aria-labelledby="mission-title">
+                <div class="about-text">
                     <h3 id="mission-title">Notre mission</h3>
                     <p>Parrainé par le Rotary Club partenaire, nous réunissons des jeunes (12–18 ans) motivés à améliorer leur communauté.</p>
                     <p>Nos objectifs principaux sont :</p>
@@ -170,9 +170,9 @@
                         <p><a href="#register">Pas encore membre ? Inscrivez-vous</a></p>
                     </div>
 
-                    <div class="member-box" id="register"></div>
+                    <div class="member-box" id="register">
                         <h3>Inscription</h3>
-                        <form action="/register" method="post" class="register-form" autocomplete="on"></form>
+                        <form action="/register" method="post" class="register-form" autocomplete="on">
                             <label for="reg-name">Nom complet</label>
                             <input id="reg-name" name="name" type="text" required autocomplete="name">
                             <label for="reg-age">Âge</label>
@@ -211,7 +211,7 @@
                     <div class="contact-info">
                         <h3>Coordonnées</h3>
                         <p><strong>Adresse :</strong> Place du Marché, Conakry, Guinée</p>
-                        <p><strong>Téléphone :</strong> +224 600 00 000</p>
+                        <p><strong>Téléphone :</strong> <a href="tel:+224600000000">+224 600 00 000</a></p>
                         <p><strong>Email :</strong> <a href="mailto:contact@interact-conakry.gn">contact@interact-conakry.gn</a></p>
                         <h4>Horaires</h4>
                         <p>Lundi - Vendredi : 09:00 - 17:00</p>
@@ -243,13 +243,6 @@
         <p>&copy; <span id="year"></span> Interact Club Conakry. Tous droits réservés.</p>
     </footer>
 
-    <script>
-        // small helpers: set current year and add lightweight progressive enhancement
-        (function () {
-            var y = new Date().getFullYear();
-            var el = document.getElementById('year');
-            if (el) el.textContent = y;
-        })();
-    </script>
+    <script src="styles/script.js"></script>
 </body>
 </html>
