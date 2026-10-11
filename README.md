@@ -16,6 +16,10 @@ Ce site a pour objectif de présenter l'Interact Club Conakry, ses missions, ses
 2. Ouvrez le dossier : `cd Interact-Conakry` 📂
 3. Ouvrez le fichier `index.html` dans votre navigateur préféré 🌐
 
+## 🌐 Déploiement
+
+La version publique est hébergée sur [Vercel](https://interact-conakry.vercel.app/). Le workflow GitHub Actions vérifie les métadonnées SEO et les fichiers publics; il ne tente pas de publier une seconde version sur GitHub Pages.
+
 ## 🤝 Contribution
 Nous sommes ouverts aux contributions ! Pour contribuer :
 1. Forkez le projet 🍴

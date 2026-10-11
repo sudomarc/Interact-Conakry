@@ -1,0 +1,69 @@
+name: Validate Interact Conakry
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-interact-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify-seo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Verify public SEO signals
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import { existsSync, readFileSync } from 'node:fs';
+
+          const read = (path) => readFileSync(path, 'utf8');
+          const origin = 'https://interact-conakry.vercel.app/';
+          const html = read('index.html');
+          const robots = read('robots.txt');
+          const sitemap = read('sitemap.xml');
+
+          for (const path of ['index.html', 'styles/styles.css', 'res/img/logo.png', 'robots.txt', 'sitemap.xml']) {
+            assert.ok(existsSync(path), `Required public file missing: ${path}`);
+          }
+
+          assert.match(html, /<title>[^<]+<\/title>/i, 'One page title must exist');
+          assert.match(html, /<meta name="description" content="[^"]+"/i, 'Meta description must exist');
+          assert.match(html, /<meta name="author" content="Sudomarc">/i, 'Author attribution must exist');
+          assert.match(html, new RegExp('<link rel="canonical" href="' + origin.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '"'), 'Canonical must match production URL');
+          assert.match(html, /<meta property="og:title" content="[^"]+"/i, 'Open Graph title must exist');
+          assert.match(html, /<meta name="twitter:card" content="summary">/i, 'Twitter summary card must exist');
+          assert.ok(html.includes('rel="author">Sudomarc</a>'), 'Footer attribution must link to Sudomarc');
+
+          const jsonLdMatch = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/i);
+          assert.ok(jsonLdMatch, 'JSON-LD must exist');
+          const jsonLd = JSON.parse(jsonLdMatch[1]);
+          const website = jsonLd['@graph']?.find((item) => item['@type'] === 'WebSite');
+          const organization = jsonLd['@graph']?.find((item) => item['@type'] === 'Organization');
+          assert.equal(website?.url, origin, 'WebSite URL must match production canonical');
+          assert.equal(website?.name, 'Interact Club Conakry', 'WebSite name must be accurate');
+          assert.equal(organization?.name, 'Interact Club Conakry', 'Organization name must be accurate');
+
+          assert.match(robots, /User-agent:\s*\*/i, 'robots.txt must declare a crawler policy');
+          assert.ok(robots.includes('Sitemap: ' + origin + 'sitemap.xml'), 'robots.txt must declare the sitemap');
+          const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+          assert.deepEqual(urls, [origin], 'Sitemap must contain exactly the canonical homepage URL');
+
+          console.log('SEO verification passed: title, description, canonical, attribution, JSON-LD, robots and sitemap.');
+          NODE
